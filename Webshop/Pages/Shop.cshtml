@@ -3,3 +3,11 @@
 @{
 }
 <h3>@Model.FsMsg</h3>
+@foreach (var prod in Model.Produckts)
+{
+    <h3> @prod.Name</h3>
+    <img src ="./img/@prod.ImageFileName"/>
+    <h4>@prod.Price</h4>
+
+
+}

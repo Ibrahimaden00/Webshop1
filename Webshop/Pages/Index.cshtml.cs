@@ -10,11 +10,11 @@ namespace Webshop.Pages
 {
     public class IndexModel : PageModel
     {
-        
+     
 
         public void OnGet()
         {
-
+            
         }
     }
 }
