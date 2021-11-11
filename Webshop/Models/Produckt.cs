@@ -11,11 +11,13 @@ namespace Webshop.Models
         public  double  Price { get; set; }
 
         public string ImageFileName { get; set; }
-        public Produckt(string name, double price, string imageFileName)
+        public string Info { get; set; }
+        public Produckt(string name, double price, string imageFileName, string info)
         {
             Name = name ;
             Price = price;
             ImageFileName = imageFileName;
+            Info = info;
         }
     }
 }
