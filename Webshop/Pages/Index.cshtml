@@ -4,9 +4,23 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class=" row">
+@foreach (var prod in Model.Produckts)
+{
+    
 
 
-</div>
+    
+  
+    <div class="card col-3" style="width: 30rem;">
+        <img src="./img-frontpage/@prod.ImageFileName" class="card-img-top" alt="card image cap">
+        <div class="card-body">
+            <p class="card-text"> <h3> @prod.Name</h3>@prod.Info</p>
+            <a href="#" class="btn btn-primary">Klicka här för att kolla på dessa skor</a>
+            <h4>@prod.Price kr</h4>
+        </div>
+    </div>
+   
+
+}
+    </div>
