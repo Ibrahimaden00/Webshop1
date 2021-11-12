@@ -10,11 +10,18 @@ namespace Webshop.Pages
 {
     public class IndexModel : PageModel
     {
-        public List<Models.Produckt> Produckts { get; set; }
+
+        public IEnumerable<Models.Products> ProductsList { get; set; }
+
+       
 
         public void OnGet()
         {
-            Produckts = Data.ProducktManager.GetProduckts();
+            ProductsList = Data.ProductsManager.GetAllProducts();
+
+
+            
+
         }
     }
 }

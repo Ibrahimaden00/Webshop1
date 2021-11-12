@@ -4,23 +4,50 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class=" row">
-@foreach (var prod in Model.Produckts)
-{
+<div class="text-center">
+    <h1 class="display-4">Mina filmer</h1>
     
 
+    @foreach (var products in Model.ProductsList)
+    {
 
-    
-  
-    <div class="card col-3" style="width: 30rem;">
-        <img src="./img-frontpage/@prod.ImageFileName" class="card-img-top" alt="card image cap">
-        <div class="card-body">
-            <p class="card-text"> <h3> @prod.Name</h3>@prod.Info</p>
-            <a href="#" class="btn btn-primary">Klicka här för att kolla på dessa skor</a>
-            <h4>@prod.Price kr</h4>
-        </div>
-    </div>
-   
+      
 
-}
-    </div>
+
+        if (products is Models.Sandaler)
+        {
+            <p>
+                <div class="card col-3" style="width: 40rem;">
+                    <p>@products.Title</p>
+
+                    <p>@products.Price kr</p>
+                    <img src="./img/@products.ImgFileName" />
+                    @(((Models.Sandaler)products).Färg)
+                </div>
+            </p>
+
+
+
+
+        }
+        if (products is Models.Sneakers)
+        {
+            <p>
+
+                <div class="card col-3" style="width: 40rem;">
+                    <p>@products.Title</p>
+
+                    <p>@products.Price kr</p>
+                    <img src="./img/@products.ImgFileName" />
+                    @(((Models.Sneakers)products).Storlek)
+                </div>
+
+
+            </p>
+        }
+
+    }
+
+
+
+</div>

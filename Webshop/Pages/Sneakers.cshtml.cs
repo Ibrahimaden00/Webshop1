@@ -7,15 +7,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Webshop.Pages
 {
-    public class ShopModel : PageModel
+    public class SneakersModel : PageModel
     {
-       
-      
-        public IEnumerable<Models.Products> ProductsList { get; set; }
         public void OnGet()
         {
-          
-            ProductsList = Data.ProductsManager.GetAllProducts();
         }
     }
 }

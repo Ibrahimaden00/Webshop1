@@ -2,23 +2,43 @@
 @model Webshop.Pages.ShopModel
 @{
 }
-<h3>@Model.FsMsg</h3>
-@foreach (var prod in Model.Produckts)
-{
-   
-       <h3> @prod.Name</h3>
-    <br>
-    
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Mina filmer</h1>
+
+
+
     
 
-    <div class="card" style="width: 18rem;">
-        <img src="./img-frontpage/@prod.ImageFileName" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text"> @prod.Info</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
- <h4>@prod.Price kr</h4>
+    @foreach (var products in Model.ProductsList)
+    {
 
-}
+
+
+        if (products is Models.Sandaler)
+        {
+            <p>
+                <div class="card col-3" style="width: 40rem;">
+                    <p>@products.Title</p>
+
+                    <p>@products.Price kr</p>
+                    <img src="./img/@products.ImgFileName" />
+                    @(((Models.Sandaler)products).Färg)
+                </div>
+
+
+
+
+
+            </p>
+
+        }
+
+
+    }
+
+
+
+</div>
