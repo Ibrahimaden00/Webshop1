@@ -1,5 +1,5 @@
 ﻿@page
-@model Webshop.Pages.SneakersModel
+@model Webshop.Pages.StövlarModel
 @{
 }
 
@@ -17,19 +17,19 @@
 
 
 
-        if (products is Models.Sneakers)
+        if (products is Models.Stövlar)
         {
             <p>
                 <div class="card col-3" style="width: 40rem;">
                     <p>@products.Title</p>
 
-
+                   
 
                     <p>@products.Price kr</p>
                     <img src="./img/@products.ImgFileName" class="card-img-top" alt="card image cap">
-                    />
-                    @(((Models.Sneakers)products).Storlek)
-                   
+                    <p> @(((Models.Stövlar)products).gummi)</p> 
+
+
                 </div>
 
 

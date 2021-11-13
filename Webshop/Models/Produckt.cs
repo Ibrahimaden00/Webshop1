@@ -18,7 +18,7 @@ namespace Webshop.Models
 
     public class Stövlar : Products
     {      
-         public  bool gummi { get; set; }
+         public  string gummi { get; set; }
         
         }
 

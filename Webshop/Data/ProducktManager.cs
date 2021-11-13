@@ -34,7 +34,7 @@ namespace Webshop.Data
                 new Models.Sandaler()
                 {
                     Id=3,
-                    Title = "Limited edition Sandaler",
+                    Title = "  Black Limited edition Sandaler",
                     ImgFileName = "Sandal3.jpg",
                     Färg = "Svar",
                     Price = 499.99,
@@ -79,7 +79,7 @@ namespace Webshop.Data
                 {
                     Id=3,
                     Title = "Black Airforce ",
-                    ImgFileName = "Sneakers4.jpg",
+                    ImgFileName = "Sneakers3.jpg",
                     Storlek = 39,
                     Price = 800.00,
                 },
@@ -87,16 +87,16 @@ namespace Webshop.Data
                 {
                     Id=4,
                     Title = "Converse light ",
-                    ImgFileName = "Sneakers5.jpg",
+                    ImgFileName = "Sneakers4.jpg",
                     Storlek = 38,
                     Price = 899.99,
                 },
-                                new Models.Stövlar()
+                    new Models.Sneakers()
                 {
                     Id=2,
                     Title = "Air Jordan 1 ",
                     ImgFileName = "Sneakers5.jpg",
-                    gummi = false,
+                   Storlek = 48,
                     Price = 9999.99,
                 },
                      new Models.Stövlar()
@@ -104,7 +104,7 @@ namespace Webshop.Data
                     Id=1,
                     Title = "Grenson ",
                     ImgFileName = "Boots1.jpg",
-                  gummi = true,
+                  gummi = "Dessa är inte gummi ",
                     Price = 99.99,
                 },
                   new Models.Stövlar()
@@ -112,7 +112,7 @@ namespace Webshop.Data
                     Id=2,
                     Title = "Dr. Martens ",
                     ImgFileName = "Boots2.jpg",
-                      gummi = false,
+                      gummi = "Dessa är gummi ",
                     Price = 459.99,
                 },
                 new Models.Stövlar()
@@ -120,7 +120,7 @@ namespace Webshop.Data
                     Id=3,
                     Title = "Timberland ",
                     ImgFileName = "Boots3.jpg",
-                   gummi = false,
+                   gummi = "Dessa är gummi ",
                     Price = 239.99,
                 },
                 new Models.Stövlar()
@@ -128,16 +128,16 @@ namespace Webshop.Data
                     Id=4,
                     Title = "Tricker’s ",
                     ImgFileName = "Boots4.jpg",
-                   gummi = false,
+                   gummi = "Dessa är gummi ",
                     Price = 889.99,
 
                 },
              new Models.Stövlar()
                 {
                     Id=5,
-                    Title = "Clarks ",
+                    Title = " Black Clarks ",
                     ImgFileName = "Boots5.jpg",
-                    gummi = true,
+                    gummi = "Dessa är inte gummi ",
                     Price = 99.99,
                 },
 
