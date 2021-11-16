@@ -11,9 +11,9 @@ namespace Webshop.Models
       
         public double Price { get; set; }     
         public string Info { get; set; }
-        public int Id { get; set; }
-      
-          public string ImgFileName { get; set; }
+        public int Id { get; set; }   
+        public string ImgFileName { get; set; }
+        public int Stock { get; set; }
     }
 
     public class Stövlar : Products

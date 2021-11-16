@@ -17,10 +17,12 @@ namespace Webshop.Data
                 {
                     Id=1,
                     Title = "Basic Sandaler",
-                    ImgFileName = "sandal1.jpg",                   
-                    Färg = "Grön",
+                    ImgFileName = "sandal1.jpg",
+                    Färg = "Grön",                  
+                     Stock = 5, 
+                    Info = "Basic sandlar som pasar bra till stranden",
                     Price = 500,
-                    Info = "Basic sandlar som pasar bra till stranden"
+
 
                 },
                 new Models.Sandaler()
@@ -29,8 +31,11 @@ namespace Webshop.Data
                     Title = "Gucci Sandaler",
                     ImgFileName = "Sandal2.jpg",
                     Färg = "Röd",
-                    Price = 999.99,
-                    Info = "Gucci egna exclusiv sandaler"
+                    Price = 999.99, 
+                    Stock = 5,
+                    Info = "Gucci egna exclusiv sandaler",
+                   
+
 
                 },
                 new Models.Sandaler()
@@ -40,7 +45,10 @@ namespace Webshop.Data
                     ImgFileName = "Sandal3.jpg",
                     Färg = "Svar",
                     Price = 499.99,
-                    Info = ""
+                    Info = "Sandaler som är tilvarkade av Nba",
+                    Stock = 5,
+                   
+
 
                 },
                 new Models.Sandaler()
@@ -50,6 +58,9 @@ namespace Webshop.Data
                     ImgFileName = "Sandal4.jpg",
                     Färg = "Blå",
                     Price = 99.99,
+                    Stock = 5,
+                    Info = "Sandalar tillverkade av Sara"
+
 
                 },
                 new Models.Sandaler()
@@ -58,7 +69,9 @@ namespace Webshop.Data
                     Title = "Ibbes Sandaler",
                     ImgFileName = "sandal5.jpg",
                     Färg = "Ljusblå",
+                    Stock = 5,
                     Price = 60.50,
+                     Info = "Sandalar tillverkade av Ibbe"
 
                 },
                 new Models.Sneakers()
@@ -67,7 +80,9 @@ namespace Webshop.Data
                     Title = "Air force",
                     ImgFileName = "Sneakers1.jpg",
                     Storlek = 44,
+                    Stock = 5,
                     Price = 1999.99,
+                    Info = "Nike egna Air force"
                 },
               
                     new Models.Sneakers()
@@ -76,7 +91,9 @@ namespace Webshop.Data
                     Title = "Converse ",
                     ImgFileName = "Sneakers2.png",
                     Storlek = 43,
+                    Stock = 5,
                     Price = 999.99,
+                      Info = "Originella Converse"
                 },
                         new Models.Sneakers()
                 {
@@ -84,7 +101,9 @@ namespace Webshop.Data
                     Title = "Black Airforce ",
                     ImgFileName = "Sneakers3.jpg",
                     Storlek = 39,
+                    Stock = 5,
                     Price = 800.00,
+                      Info = "Bland de första Black Airforce"
                 },
                             new Models.Sneakers()
                 {
@@ -93,22 +112,28 @@ namespace Webshop.Data
                     ImgFileName = "Sneakers4.jpg",
                     Storlek = 38,
                     Price = 899.99,
+                    Stock = 5,
+                      Info = "Designer Converse"
                 },
                     new Models.Sneakers()
                 {
                     Id=10,
                     Title = "Air Jordan 1 ",
                     ImgFileName = "Sneakers5.jpg",
-                   Storlek = 48,
+                    Storlek = 48,
                     Price = 9999.99,
+                    Stock = 5,
+                    Info= ""
                 },
                      new Models.Stövlar()
                 {
                     Id=11,
                     Title = "Grenson ",
                     ImgFileName = "Boots1.jpg",
-                  gummi = "Dessa är inte gummi ",
-                    Price = 99.99,
+                     gummi = "Dessa är inte gummi ",
+                     Stock = 5,
+                     Price = 99.99,
+                     Info= ""
                 },
                   new Models.Stövlar()
                 {
@@ -117,6 +142,8 @@ namespace Webshop.Data
                     ImgFileName = "Boots2.jpg",
                       gummi = "Dessa är gummi ",
                     Price = 459.99,
+                    Stock = 5,
+                    Info= ""
                 },
                 new Models.Stövlar()
                 {
@@ -125,6 +152,8 @@ namespace Webshop.Data
                     ImgFileName = "Boots3.jpg",
                    gummi = "Dessa är gummi ",
                     Price = 239.99,
+                    Stock = 5,
+                    Info= ""
                 },
                 new Models.Stövlar()
                {
@@ -133,6 +162,8 @@ namespace Webshop.Data
                     ImgFileName = "Boots4.jpg",
                    gummi = "Dessa är gummi ",
                     Price = 889.99,
+                    Stock = 5,
+                    Info= ""
 
                 },
              new Models.Stövlar()
@@ -142,6 +173,8 @@ namespace Webshop.Data
                     ImgFileName = "Boots5.jpg",
                     gummi = "Dessa är inte gummi ",
                     Price = 99.99,
+                    Stock = 5,
+                    Info= ""
                 },
 
 
