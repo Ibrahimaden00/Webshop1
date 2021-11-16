@@ -20,6 +20,7 @@ namespace Webshop.Data
                     ImgFileName = "sandal1.jpg",                   
                     Färg = "Grön",
                     Price = 500,
+                    Info = "Basic sandlar som pasar bra till stranden"
 
                 },
                 new Models.Sandaler()
@@ -29,6 +30,7 @@ namespace Webshop.Data
                     ImgFileName = "Sandal2.jpg",
                     Färg = "Röd",
                     Price = 999.99,
+                    Info = "Gucci egna exclusiv sandaler"
 
                 },
                 new Models.Sandaler()
@@ -38,6 +40,7 @@ namespace Webshop.Data
                     ImgFileName = "Sandal3.jpg",
                     Färg = "Svar",
                     Price = 499.99,
+                    Info = ""
 
                 },
                 new Models.Sandaler()
@@ -60,7 +63,7 @@ namespace Webshop.Data
                 },
                 new Models.Sneakers()
                 {
-                    Id=1,
+                    Id=6,
                     Title = "Air force",
                     ImgFileName = "Sneakers1.jpg",
                     Storlek = 44,
@@ -69,7 +72,7 @@ namespace Webshop.Data
               
                     new Models.Sneakers()
                 {
-                    Id=2,
+                    Id=7,
                     Title = "Converse ",
                     ImgFileName = "Sneakers2.png",
                     Storlek = 43,
@@ -77,7 +80,7 @@ namespace Webshop.Data
                 },
                         new Models.Sneakers()
                 {
-                    Id=3,
+                    Id=8,
                     Title = "Black Airforce ",
                     ImgFileName = "Sneakers3.jpg",
                     Storlek = 39,
@@ -85,7 +88,7 @@ namespace Webshop.Data
                 },
                             new Models.Sneakers()
                 {
-                    Id=4,
+                    Id=9,
                     Title = "Converse light ",
                     ImgFileName = "Sneakers4.jpg",
                     Storlek = 38,
@@ -93,7 +96,7 @@ namespace Webshop.Data
                 },
                     new Models.Sneakers()
                 {
-                    Id=2,
+                    Id=10,
                     Title = "Air Jordan 1 ",
                     ImgFileName = "Sneakers5.jpg",
                    Storlek = 48,
@@ -101,7 +104,7 @@ namespace Webshop.Data
                 },
                      new Models.Stövlar()
                 {
-                    Id=1,
+                    Id=11,
                     Title = "Grenson ",
                     ImgFileName = "Boots1.jpg",
                   gummi = "Dessa är inte gummi ",
@@ -109,7 +112,7 @@ namespace Webshop.Data
                 },
                   new Models.Stövlar()
                 {
-                    Id=2,
+                    Id=12,
                     Title = "Dr. Martens ",
                     ImgFileName = "Boots2.jpg",
                       gummi = "Dessa är gummi ",
@@ -117,7 +120,7 @@ namespace Webshop.Data
                 },
                 new Models.Stövlar()
                 {
-                    Id=3,
+                    Id=13,
                     Title = "Timberland ",
                     ImgFileName = "Boots3.jpg",
                    gummi = "Dessa är gummi ",
@@ -125,7 +128,7 @@ namespace Webshop.Data
                 },
                 new Models.Stövlar()
                {
-                    Id=4,
+                    Id=14,
                     Title = "Tricker’s ",
                     ImgFileName = "Boots4.jpg",
                    gummi = "Dessa är gummi ",
@@ -134,7 +137,7 @@ namespace Webshop.Data
                 },
              new Models.Stövlar()
                 {
-                    Id=5,
+                    Id=15,
                     Title = " Black Clarks ",
                     ImgFileName = "Boots5.jpg",
                     gummi = "Dessa är inte gummi ",
@@ -145,5 +148,6 @@ namespace Webshop.Data
             };
             return Products;
         }
+       
     }
 }

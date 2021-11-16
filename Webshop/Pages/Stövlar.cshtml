@@ -1,14 +1,21 @@
 ﻿@page
 @model Webshop.Pages.StövlarModel
 @{
+    Double pricesum = 0;
 }
 
 
-
 <div class="text-center">
-    <h1 class="display-4">Mina filmer</h1>
+    <h1 class="display-4">Sneakers</h1>
 
 
+    @foreach (var cartProduckt in Model.CartList)
+    {
+
+        pricesum += cartProduckt.Price;
+
+
+    }
 
 
 
@@ -23,15 +30,15 @@
                 <div class="card col-3" style="width: 40rem;">
                     <p>@products.Title</p>
 
-                   
+
 
                     <p>@products.Price kr</p>
                     <img src="./img/@products.ImgFileName" class="card-img-top" alt="card image cap">
-                    <p> @(((Models.Stövlar)products).gummi)</p> 
+                    <p> @(((Models.Stövlar)products).gummi)</p>
 
+                    <a asp-page="Stövlar" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
 
                 </div>
-
 
 
 

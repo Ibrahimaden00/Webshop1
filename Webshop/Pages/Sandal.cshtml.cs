@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Webshop.Pages
 {
-    public class SneakersModel : PageModel
+    public class SandalModel : PageModel
     {
         public IEnumerable<Models.Products> ProductsList { get; set; }
 

@@ -8,6 +8,12 @@
 <div class="text-center">
     <h1 class="display-4">Välj en sko kategori</h1>
 
+
+
+
+
+
+
     @foreach (var products in Model.ProductsList)
     {
 
@@ -16,7 +22,7 @@
             <p>
                 <div class="card col-3" style="width: 40rem;">
                     <img src="./img/@products.ImgFileName" />
-                    <a href="" class="btn btn-primary stretched-link">Flera Sandlar  här</a>
+                    <a href="Sandal" class="btn btn-primary stretched-link">Flera Sandlar  här</a>
                 </div>
             </p>
 
@@ -42,13 +48,11 @@
         <a href="Stövlar" class="btn btn-primary stretched-link">Flera Stövlar här</a>
 
     </div>
- 
 </p>
         }
 
 
     }
-
 
 
 </div>

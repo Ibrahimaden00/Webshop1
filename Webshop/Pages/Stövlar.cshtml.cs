@@ -10,9 +10,20 @@ namespace Webshop.Pages
     public class StövlarModel : PageModel
     {
         public IEnumerable<Models.Products> ProductsList { get; set; }
-        public void OnGet()
-        {                  
-                ProductsList = Data.ProductsManager.GetAllProducts();
+
+        public IEnumerable<Models.Products> CartList { get; set; }
+
+        public void OnGet(int producktId)
+        {
+            ProductsList = Data.ProductsManager.GetAllProducts();
+
+            CartList = Data.CartManagar.GetCartProduckts();
+
+            if (producktId != 0)
+            {
+                var produckt = ProductsList.Where(m => m.Id == producktId).FirstOrDefault();
+                Data.CartManagar.AddCartProduckt(produckt);
+            }
         }
     }
     

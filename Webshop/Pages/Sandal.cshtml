@@ -1,15 +1,10 @@
 ﻿@page
-@model Webshop.Pages.SneakersModel
-@{
-    double pricesum = 0;
+@model Webshop.Pages.SandalModel
+@{ double pricesum = 0;
 }
-
-
 
 <div class="text-center">
     <h1 class="display-4">Sneakers</h1>
-
-
 
 
     @foreach (var cartProduckt in Model.CartList)
@@ -22,38 +17,20 @@
 
     @foreach (var products in Model.ProductsList)
     {
-
-
-
-        if (products is Models.Sneakers)
+        if (products is Models.Sandaler)
         {
             <p>
                 <div class="card col-3" style="width: 40rem;">
                     <p>@products.Title</p>
-
-
-
                     <p>@products.Price kr</p>
                     <img src="./img/@products.ImgFileName" class="card-img-top" alt="card image cap">
                     />
-                    @(((Models.Sneakers)products).Storlek)
-                    <a asp-page="Sneakers" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
-
-
-
+                    @(((Models.Sandaler)products).Färg)
+                    <a asp-page="Sandal" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
                 </div>
 
-
-
-
-
             </p>
-
         }
 
-
     }
-
-
-
 </div>
