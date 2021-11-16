@@ -35,10 +35,10 @@
 
                     <p>@products.Price kr</p>
                     <img src="./img/@products.ImgFileName" class="card-img-top" alt="card image cap">
-                    />
-                    @(((Models.Sneakers)products).Storlek)
+                    storlek  @(((Models.Sneakers)products).Storlek) <br />
+                    @products.Info <br />
+                    Det finns  @products.Stock kvar i lager
                     <a asp-page="Sneakers" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
-
 
 
                 </div>
