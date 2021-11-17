@@ -195,20 +195,16 @@ namespace Webshop.Data
 
             if (category == "Sneakers")
             { producktAdd = new Models.Sneakers(); }
+            if (category == "Stövlar")
+            { producktAdd = new Models.Stövlar(); }
 
-                      producktAdd.Title = title;
+            producktAdd.Title = title;
                     producktAdd.Stock = stock;
                     producktAdd.Price = price;
                     producktAdd.ImgFileName = imgFileName;
                     producktAdd.Id = id;
                     producktAdd.Info = info;
-                    Products.Add(producktAdd);
-                    
-                
-
-                 
-
-            
+                    Products.Add(producktAdd);           
                return "Denna produckt har lagts till";
         }
 
