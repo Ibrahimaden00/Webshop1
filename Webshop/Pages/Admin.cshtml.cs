@@ -13,16 +13,30 @@ namespace Webshop.Pages
 
         [BindProperty]
         public string title { get; set; }
-
+        [BindProperty]
         public double price { get; set; }
+        [BindProperty]
         public string info { get; set; }
-        public int id { get; set; }
+        [BindProperty]
+        public int id { get; set; }     
+        [BindProperty]
+        public string imgFileName { get; set; }
+        [BindProperty]
 
-        public string ImgFileName { get; set; }
+        public String category { get; set; }
+        [BindProperty]
+        public int stock { get; set; }
         public void OnGet()
         {
 
-
+            ProductsList = Data.ProductsManager.GetAllProducts();
+            {
+               
+            }
+        }
+        public void OnPost()
+        {
+            Data.ProductsManager.AddProduckt(category, title, stock, imgFileName, id, info, price);
         }
     }
 }

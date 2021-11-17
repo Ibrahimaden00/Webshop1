@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Webshop.Models;
 
 namespace Webshop.Data
 {
@@ -182,8 +183,35 @@ namespace Webshop.Data
 
             };
             }
+          
             return Products;
         }
+
+        public static string AddProduckt(string category, string title, int stock, string imgFileName, int id, string info, double price)
+        {
+            var producktAdd = new Models.Products();
+            if (category=="sandal")
+            { producktAdd = new Models.Sandaler(); }
+
+            if (category == "Sneakers")
+            { producktAdd = new Models.Sneakers(); }
+
+                      producktAdd.Title = title;
+                    producktAdd.Stock = stock;
+                    producktAdd.Price = price;
+                    producktAdd.ImgFileName = imgFileName;
+                    producktAdd.Id = id;
+                    producktAdd.Info = info;
+                    Products.Add(producktAdd);
+                    
+                
+
+                 
+
+            
+               return "Denna produckt har lagts till";
+        }
+
        
     }
 }

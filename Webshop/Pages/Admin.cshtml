@@ -4,10 +4,30 @@
 }
 
 
-    <form method="post">
+<form method="post">
+    <div>
+        <div>
+            <input type="radio" id="sandal" name="category" value="sandal">
+            <label for="sandal">Sandal</label>
+        </div>
 
-          <input type="text" asp-for="@Model.title"/>
-          <input  type="submit" />
-        <p> add title</p>
+        <div>
+            <input type="radio" id="Stövlar" name="category" value="Stövlar">
+            <label for="Stövlar">Stövlar</label>
+        </div>
 
-    </form>
+        <div>
+            <input type="radio" id="Sneakers" name="category" value="Sneakers">
+            <label for="Sneakers">Snearkers</label>
+        </div>
+
+        <input type="text" asp-for="@Model.title" />
+        <p>skiv in producktens Id</p> <input type="text" asp-for="@Model.id" />
+        <p>skiv in Titels Namn </p> <input type="text" asp-for="@Model.title" />
+        <p>skiv in producktens img länk</p> <input type="text" asp-for="@Model.imgFileName" />
+        <p>skiv in producktens pris</p> <input type="text" asp-for="@Model.price" />
+        <p> skriv in antal som skall finnas i lager</p>
+
+    </div>
+    <input type="submit" />
+</form>
