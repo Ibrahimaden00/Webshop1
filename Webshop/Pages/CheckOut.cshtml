@@ -1,0 +1,26 @@
+﻿@page
+@model Webshop.Pages.CheckOutModel
+@{
+}
+
+
+<div class=" = card col-3 " style="width: 40rem;">
+
+    <ul class="list-group" class"card col-3" style="width: 40rem;">
+        @foreach (var produckt in Model.CartList)
+        {
+
+
+            @produckt.Title
+
+
+            <li class="list-group-item">@produckt.Title</li>
+            <li class="list-group-item">@produckt.Price</li>
+            <li class="list-group-item">@produckt.Info</li>
+
+            <li class="list-group-item"> <i /></li>
+               @produckt.ImgFileName
+        }
+    </ul>
+    </div >
+
