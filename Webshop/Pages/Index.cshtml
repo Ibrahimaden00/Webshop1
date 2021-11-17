@@ -2,7 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    double pricesum = 0;
+   
 }
 
 <div class="text-center">
@@ -10,15 +10,6 @@
 
 
 
-    @foreach (var cartProduckt in Model.CartList)
-    {
-
-        pricesum += cartProduckt.Price;
-
-
-    }
-
-    <h1>Summan av alla produckter @pricesum</h1>
 
 
     @foreach (var products in Model.ProductsList)
@@ -47,6 +38,19 @@
                     <p>@products.Price kr</p>
                     <img src="./img/@products.ImgFileName" />
                     @(((Models.Sneakers)products).Storlek)
+                    <a asp-page="Index" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
+                </div>
+            </p>
+        }
+        if (products is Models.Stövlar)
+        {
+            <p>
+                <div class="card col-3" style="width: 40rem;">
+                    <p>@products.Title</p>
+
+                    <p>@products.Price kr</p>
+                    <img src="./img/@products.ImgFileName" />
+                    @(((Models.Stövlar)products).gummi)
                     <a asp-page="Index" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
                 </div>
             </p>

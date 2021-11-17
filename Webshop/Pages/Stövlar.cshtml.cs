@@ -25,11 +25,12 @@ namespace Webshop.Pages
             {
                 var produckt = ProductsList.Where(m => m.Id == producktId).FirstOrDefault();
                 Data.CartManagar.AddCartProduckt(produckt);
+
                 
             }
-            if (stockID != 0)
+            if (producktId != 0)
             {
-                var produck = ProductsList.Where(m => m.Id == stockID).FirstOrDefault();
+                var produck = ProductsList.Where(m => m.Id == producktId).FirstOrDefault();
                 Data.StockManager.RemoveStockBalance(produck);
             }
 

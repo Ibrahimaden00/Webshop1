@@ -1,20 +1,24 @@
 ﻿@page
 @model Webshop.Pages.CartModel
 @{ double pricesum = 0;
-    
+
 }
 
 
 @foreach (var cartProduckt in Model.CartList)
-{    
-    pricesum += cartProduckt.Price;    
-    
+{
+    pricesum += cartProduckt.Price;
+
 }
 
-@foreach(var produckt in Model.CartList)
+@foreach (var produckt in Model.CartList)
 {
+    <p>@produckt.Title och kostar @produckt.Price  Kr</p>
+    <p> Produkt beskrivning</p>
+    <p>@produckt.Info</p>
+}
+<h3>Summan av alla produckter  @Math.Round(pricesum) kr </h3>
+
+
+<a href="CheckOut" class="btn btn-outline-success">Check out </a>
     
-    
-               <p>@produckt.Title</p>
-            }
-<h1>Summan av alla produckter  @Math.Round(pricesum) kr </h1>

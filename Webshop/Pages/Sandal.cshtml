@@ -4,14 +4,13 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Sneakers</h1>
+    <h1 class="display-4">Sandaler</h1>
 
 
     @foreach (var cartProduckt in Model.CartList)
     {
 
         pricesum += cartProduckt.Price;
-
 
     }
 
@@ -24,9 +23,11 @@
                     <p>@products.Title</p>
                     <p>@products.Price kr</p>
                     <img src="./img/@products.ImgFileName" class="card-img-top" alt="card image cap">
-                    />
+                    Denna Produkts färg är
                     @(((Models.Sandaler)products).Färg)
+                    <p>@products.Info</p>
                     <a asp-page="Sandal" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
+                    <p> Det fanns bara @products.Stock kvar</p>
                 </div>
 
             </p>

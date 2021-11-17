@@ -4,23 +4,23 @@
 }
 
 
-<div class=" = card col-3 " style="width: 40rem;">
 
-    <ul class="list-group" class"card col-3" style="width: 40rem;">
-        @foreach (var produckt in Model.CartList)
-        {
+@foreach (var produckt in Model.CartList)
+{
 
 
-            @produckt.Title
 
+   
 
-            <li class="list-group-item">@produckt.Title</li>
-            <li class="list-group-item">@produckt.Price</li>
-            <li class="list-group-item">@produckt.Info</li>
+<div class="card" style="width: 18rem;">
+    <img src="./img/@produckt.ImgFileName" class="card-img-top" alt="card image cap">
+    <div class="card-body">
+        <h5 class="card-title">@produckt.Title</h5>
+        <p class="card-text">@produckt.Info @produckt.Price</p>
 
-            <li class="list-group-item"> <i /></li>
-               @produckt.ImgFileName
-        }
-    </ul>
-    </div >
+    </div>
+</div>
+
+    }
+    
 
