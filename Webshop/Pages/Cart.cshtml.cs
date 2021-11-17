@@ -12,13 +12,13 @@ namespace Webshop.Pages
         public IEnumerable<Models.Products> ProductsList { get; set; }
 
         public IEnumerable<Models.Products> CartList { get; set; }
-
+        public IEnumerable<Models.Products> StockList { get; set; }
         public void OnGet(int producktId)
         {
             ProductsList = Data.ProductsManager.GetAllProducts();
 
             CartList = Data.CartManagar.GetCartProduckts();
-
+            StockList = Data.StockManager.GetStockBalance();
             if (producktId != 0)
             {
                 var produckt = ProductsList.Where(m => m.Id == producktId).FirstOrDefault();

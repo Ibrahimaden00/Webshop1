@@ -15,13 +15,14 @@
         pricesum += cartProduckt.Price;
 
 
-    }
+    } 
+
 
 
 
     @foreach (var products in Model.ProductsList)
     {
-
+        
 
 
         if (products is Models.Stövlar)
@@ -37,6 +38,11 @@
                     <p> @(((Models.Stövlar)products).gummi)</p>
 
                     <a asp-page="Stövlar" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
+                    <p>Det fanns @products.Stock av dessa produckter kvar i lager</p>
+
+
+                    <a asp-page="Stövlar" asp-route-stockId="@products.Id">Ta bort från lagret</a>
+
 
                 </div>
 

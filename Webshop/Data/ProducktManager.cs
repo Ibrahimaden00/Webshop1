@@ -11,15 +11,17 @@ namespace Webshop.Data
 
         public static List<Models.Products> GetAllProducts()
         {
-            Products = new List<Models.Products>
+            if (!Products.Any())
+            {
+                Products = new List<Models.Products>
             {
                 new Models.Sandaler()
                 {
                     Id=1,
                     Title = "Basic Sandaler",
                     ImgFileName = "sandal1.jpg",
-                    Färg = "Grön",                  
-                     Stock = 5, 
+                    Färg = "Grön",
+                     Stock = 5,
                     Info = "Basic sandlar som pasar bra till stranden",
                     Price = 500,
 
@@ -31,10 +33,10 @@ namespace Webshop.Data
                     Title = "Gucci Sandaler",
                     ImgFileName = "Sandal2.jpg",
                     Färg = "Röd",
-                    Price = 999.99, 
+                    Price = 999.99,
                     Stock = 5,
                     Info = "Gucci egna exclusiv sandaler",
-                   
+
 
 
                 },
@@ -47,7 +49,7 @@ namespace Webshop.Data
                     Price = 499.99,
                     Info = "Sandaler som är tilvarkade av Nba",
                     Stock = 5,
-                   
+
 
 
                 },
@@ -84,7 +86,7 @@ namespace Webshop.Data
                     Price = 1999.99,
                     Info = "Nike egna Air force"
                 },
-              
+
                     new Models.Sneakers()
                 {
                     Id=7,
@@ -179,6 +181,7 @@ namespace Webshop.Data
 
 
             };
+            }
             return Products;
         }
        
