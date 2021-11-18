@@ -3,24 +3,53 @@
 @{
 }
 
-
+<h2> Dessa produkter öper du nu</h2>
 
 @foreach (var produckt in Model.CartList)
-{
 
-
-
-   
-
-<div class="card" style="width: 18rem;">
-    <img src="./img/@produckt.ImgFileName" class="card-img-top" alt="card image cap">
-    <div class="card-body">
-        <h5 class="card-title">@produckt.Title</h5>
-        <p class="card-text">@produckt.Info @produckt.Price</p>
-
+{     
+    <div class="card" style="width: 18rem;">
+        <img src="./img/@produckt.ImgFileName" class="card-img-top" alt="card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@produckt.Title</h5>
+            <p class="card-text">@produckt.Info <p/>
+       <p>   Denna produkt kostar  @produckt.Price</p>
+        </div>
     </div>
-</div>
+}
 
-    }
-    
+
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputAddress">Adress</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Långgatan 9">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="Stad">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputStad">Stad</label>
+            <select id="inputStad" class="form-control">
+                <option selected>Choose...</option>
+                <option>Göteborg</option>
+                <option>Stockholm</option>
+                <option>Malmö</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputPostNummer">Post Nummer</label>
+            <input type="text" class="form-control" id="Post Nummer">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Köp</button>
+</form>
+
 

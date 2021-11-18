@@ -46,7 +46,7 @@ namespace Webshop.Data
                     Id=3,
                     Title = "  Black Limited edition Sandaler",
                     ImgFileName = "Sandal3.jpg",
-                    Färg = "Svar",
+                    Färg = "Svart",
                     Price = 499.99,
                     Info = "Sandaler som är tilvarkade av Nba",
                     Stock = 5,
