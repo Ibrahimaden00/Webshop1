@@ -44,7 +44,7 @@ namespace Webshop.Data
                 new Models.Sandaler()
                 {
                     Id=3,
-                    Title = "  Black Limited edition Sandaler",
+                    Title = " Black Limited edition Sandaler",
                     ImgFileName = "Sandal3.jpg",
                     Färg = "Svart",
                     Price = 499.99,
@@ -96,7 +96,7 @@ namespace Webshop.Data
                     Storlek = 43,
                     Stock = 5,
                     Price = 999.99,
-                      Info = "Originella Converse"
+                    Info = "Originella Converse"
                 },
                         new Models.Sneakers()
                 {
@@ -199,15 +199,28 @@ namespace Webshop.Data
             { producktAdd = new Models.Stövlar(); }
 
             producktAdd.Title = title;
-                    producktAdd.Stock = stock;
-                    producktAdd.Price = price;
-                    producktAdd.ImgFileName = imgFileName;
-                    producktAdd.Id = id;
-                    producktAdd.Info = info;
-                    Products.Add(producktAdd);           
+            producktAdd.Stock = stock;
+            producktAdd.Price = price;
+            producktAdd.ImgFileName = imgFileName;
+            producktAdd.Id = id;
+            producktAdd.Info = info;
+            Products.Add(producktAdd);           
                return "Denna produckt har lagts till";
         }
+        public static string EditProduckt(string title, int stock, int id, double price)
+        {
+   
+           
+           
+            Products[id - 1].Title = title; 
+            Products[id - 1].Price = price;
+            Products[id - 1].Stock =stock;
+            
+          
 
-       
+            return "Denna produckt har lagts till";
+        }
+
+
     }
 }

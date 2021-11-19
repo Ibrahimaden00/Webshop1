@@ -22,10 +22,14 @@ namespace Webshop.Pages
         [BindProperty]
         public string imgFileName { get; set; }
         [BindProperty]
-
         public String category { get; set; }
         [BindProperty]
         public int stock { get; set; }
+
+
+
+ 
+     
         public void OnGet()
         {
 
@@ -37,6 +41,9 @@ namespace Webshop.Pages
         public void OnPost()
         {
             Data.ProductsManager.AddProduckt(category, title, stock, imgFileName, id, info, price);
+            Data.ProductsManager.EditProduckt( title, stock,  id,  price);
+
         }
+
     }
 }

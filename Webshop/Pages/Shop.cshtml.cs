@@ -14,7 +14,14 @@ namespace Webshop.Pages
         public IEnumerable<Models.Products> ProductsList { get; set; }
         public void OnGet()
         {
+            ProductsList = Data.ProductsManager.GetAllProducts();
           
+
+
+        }
+        public void Onpost()
+        {
+
             ProductsList = Data.ProductsManager.GetAllProducts();
             ProductsList = from p in ProductsList
                            where (p is Models.Products)
