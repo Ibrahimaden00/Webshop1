@@ -28,6 +28,7 @@ namespace Webshop.Pages
             {
                 var produck = ProductsList.Where(m => m.Id == producktId).FirstOrDefault();
                 Data.StockManager.RemoveStockBalance(produck);
+
             }
         }
     }

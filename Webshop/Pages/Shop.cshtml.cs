@@ -15,7 +15,11 @@ namespace Webshop.Pages
         public void OnGet()
         {
             ProductsList = Data.ProductsManager.GetAllProducts();
-          
+            ProductsList = from p in ProductsList
+                           where (p is Models.Products)
+                           select (p);
+
+            ProductsList = ProductsList.Where(p => p.Title.Contains("Black"));
 
 
         }
