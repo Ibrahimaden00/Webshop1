@@ -18,5 +18,16 @@ namespace Webshop.Data
             CartProduckts.Add(addProduckt);
             return CartProduckts;
         }
+
+
+        public static List<Models.Products> ClearCart()
+        {
+            CartProduckts.Clear();
+
+            return CartProduckts;
+        }
+
+
+ 
     }
 }
