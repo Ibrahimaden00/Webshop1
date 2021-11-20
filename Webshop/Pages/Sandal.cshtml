@@ -1,0 +1,38 @@
+﻿@page
+@model Webshop.Pages.SandalModel
+@{ double pricesum = 0;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Sandaler</h1>
+
+
+    @foreach (var cartProduckt in Model.CartList)
+    {
+
+        pricesum += cartProduckt.Price;
+
+    }
+
+    @foreach (var products in Model.ProductsList)
+    {
+        if (products is Models.Sandaler)
+        {
+            <p>
+                <div class="card col-3" style="width: 40rem;">
+                    <p>@products.Title</p>
+                    <p>@products.Price kr</p>
+                    <img src="./img/@products.ImgFileName" class="card-img-top" alt="card image cap">
+                    Denna Produkts färg är
+                    @(((Models.Sandaler)products).Färg)
+                    <p>@products.Info</p>
+                    <a asp-page="Sandal" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
+                    <p> Det fanns bara @products.Stock kvar</p>
+                    <p> Denna produkts id är @products.Id</p>
+                </div>
+
+            </p>
+        }
+
+    }
+</div>

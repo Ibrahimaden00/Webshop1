@@ -1,0 +1,49 @@
+﻿@page
+@model Webshop.Pages.AdminModel
+@{
+}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <form method="post">
+                <div>
+                    <div>
+                        <h3>Välj vilken Kategori du vill lägga till en produkt</h3>
+                        <input type="radio" id="sandal" name="category" value="sandal">
+                        <label for="sandal">Sandal</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Stövlar" name="category" value="Stövlar">
+                        <label for="Stövlar">Stövlar</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Sneakers" name="category" value="Sneakers">
+                        <label for="Sneakers">Sneakers</label>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item"><p>skriv in producktens Id</p> <input type="text" asp-for="@Model.id" /></li>
+                        <li class="list-group-item"><p>skriv in Titels Namn </p> <input type="text" asp-for="@Model.title" /></li>
+                        <li class="list-group-item"><p>skriv in producktens img länk</p> <input type="text" asp-for="@Model.imgFileName" />
+                        <li>
+                        <li class="list-group-item"><p>skiv in producktens pris</p> <input type="text" asp-for="@Model.price" /></li>
+                        <li class="list-group-item"><p>Antal i lager </p><input type="text" asp-for="@Model.stock" /></li>
+
+                    </ul>
+
+                    <input type="submit" />
+                </div>
+            </form>
+        </div>
+        <div class="col-sm">
+            <h3>Välkommen till Admin page</h3> 
+            <p>Om du vill lägga till en produkt välj en kategori och mata in värden</p>
+            <p> Kom ihåg att välja en Id som inte är tagen</p>
+            <p> Om du vill ändra en produckt fyll bara in Id och vad du vill skall ändras</p>
+        </div>
+    </div>
+</div>

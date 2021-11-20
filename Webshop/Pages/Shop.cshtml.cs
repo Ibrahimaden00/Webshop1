@@ -9,13 +9,30 @@ namespace Webshop.Pages
 {
     public class ShopModel : PageModel
     {
-
-        public String FsMsg { get; set; }
-        public string smth { get; set; }
-        public int MyProperty { get; set; }
+       
+      
+        public IEnumerable<Models.Products> ProductsList { get; set; }
         public void OnGet()
         {
-            FsMsg = "Framsida av shoppen där 3 olika producter kommer ligga";
+            ProductsList = Data.ProductsManager.GetAllProducts();
+            ProductsList = from p in ProductsList
+                           where (p is Models.Products)
+                           select (p);
+
+            ProductsList = ProductsList.Where(p => p.Title.Contains("Black"));
+
+
+        }
+        public void Onpost()
+        {
+
+            ProductsList = Data.ProductsManager.GetAllProducts();
+            ProductsList = from p in ProductsList
+                           where (p is Models.Products)
+                           select (p);
+
+            ProductsList = ProductsList.Where(p => p.Title.Contains("Black"));
+
         }
     }
 }

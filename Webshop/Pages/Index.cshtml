@@ -2,11 +2,65 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+   
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <p>hello</p>
-    <p>hello 1</p>
-</div>
+
+
+
+    <h2> Trendiga Produkter</h2>
+
+
+    @foreach (var products in Model.ProductsList)
+    {
+        if (products is Models.Sandaler)
+        {
+            <p>
+                <div class="card col-3" style="width: 40rem;">
+                    <p>@products.Title</p>
+
+                    <p>@products.Price kr</p>
+                    <img src="./img/@products.ImgFileName" />
+                   Denna produkts färg är @(((Models.Sandaler)products).Färg)
+                    <a asp-page="Index" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
+
+                </div>
+            </p>
+
+        }
+        if (products is Models.Sneakers)
+        {
+            <p>
+                <div class="card col-3" style="width: 40rem;">
+                    <p>@products.Title</p>
+
+                    <p>@products.Price kr</p>
+                    <img src="./img/@products.ImgFileName" />
+                  Storleken på denna produkt är @(((Models.Sneakers)products).Storlek)
+                    <a asp-page="Index" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
+                </div>
+            </p>
+        }
+        if (products is Models.Stövlar)
+        {
+            <p>
+                <div class="card col-3" style="width: 40rem;">
+                    <p>@products.Title</p>
+
+                    <p>@products.Price kr</p>
+                    <img src="./img/@products.ImgFileName" />
+                    @(((Models.Stövlar)products).gummi)
+                    <a asp-page="Index" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
+                </div>
+            </p>
+        }
+
+    }
+
+
+
+
+
+</div>  
+

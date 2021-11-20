@@ -1,29 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Webshop.Pages
 {
-    public class IndexModel : PageModel
+    public class SneakersModel : PageModel
     {
-
         public IEnumerable<Models.Products> ProductsList { get; set; }
 
-        public IEnumerable<Models.Products>  CartList{ get; set; }
+        public IEnumerable<Models.Products> CartList { get; set; }
 
         public void OnGet(int producktId)
         {
             ProductsList = Data.ProductsManager.GetAllProducts();
-            ProductsList = Data.ProductsManager.GetAllProducts();
-            ProductsList = from p in ProductsList
-                           where (p is Models.Products)
-                           select (p);
-
-            ProductsList = ProductsList.Where(p => p.Title.Contains("Black"));
 
             CartList = Data.CartManagar.GetCartProduckts();
 
@@ -32,6 +24,12 @@ namespace Webshop.Pages
                 var produckt = ProductsList.Where(m => m.Id == producktId).FirstOrDefault();
                 Data.CartManagar.AddCartProduckt(produckt);
             }
+            if (producktId != 0)
+            {
+                var produck = ProductsList.Where(m => m.Id == producktId).FirstOrDefault();
+                Data.StockManager.RemoveStockBalance(produck);
+            }
+
         }
     }
 }
