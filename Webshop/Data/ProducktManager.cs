@@ -126,7 +126,7 @@ namespace Webshop.Data
                     Storlek = 48,
                     Price = 9999.99,
                     Stock = 5,
-                    Info= ""
+                    Info= "Michael Jordans första basket Skor"
                 },
                      new Models.Stövlar()
                 {
@@ -136,17 +136,17 @@ namespace Webshop.Data
                      gummi = "Dessa är inte gummi ",
                      Stock = 5,
                      Price = 99.99,
-                     Info= ""
+                     Info= "Sköna och klimat vänliga Boots"
                 },
                   new Models.Stövlar()
                 {
                     Id=12,
                     Title = "Dr. Martens ",
                     ImgFileName = "Boots2.jpg",
-                      gummi = "Dessa är gummi ",
+                    gummi = "Dessa är gummi ",
                     Price = 459.99,
                     Stock = 5,
-                    Info= ""
+                    Info= "Perfekta stövlar för höst vädret"
                 },
                 new Models.Stövlar()
                 {
@@ -156,7 +156,7 @@ namespace Webshop.Data
                    gummi = "Dessa är gummi ",
                     Price = 239.99,
                     Stock = 5,
-                    Info= ""
+                    Info= "Stövlar för alla"
                 },
                 new Models.Stövlar()
                {
@@ -166,7 +166,7 @@ namespace Webshop.Data
                    gummi = "Dessa är gummi ",
                     Price = 889.99,
                     Stock = 5,
-                    Info= ""
+                    Info= "Bästa stövlar i marknaden"
 
                 },
              new Models.Stövlar()
@@ -177,7 +177,7 @@ namespace Webshop.Data
                     gummi = "Dessa är inte gummi ",
                     Price = 99.99,
                     Stock = 5,
-                    Info= ""
+                    Info= "Billiga stövlar för alla"
                 },
 
 
@@ -205,19 +205,15 @@ namespace Webshop.Data
             producktAdd.Id = id;
             producktAdd.Info = info;
             Products.Add(producktAdd);           
-               return "Denna produckt har lagts till";
+            return "Denna produckt har lagts till";
         }
         public static string EditProduckt(string title, int stock, int id, double price)
         {
    
-           
-           
+            
             Products[id - 1].Title = title; 
             Products[id - 1].Price = price;
             Products[id - 1].Stock =stock;
-            
-          
-
             return "Denna produckt har lagts till";
         }
 

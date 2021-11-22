@@ -25,11 +25,7 @@ namespace Webshop.Pages
         public String category { get; set; }
         [BindProperty]
         public int stock { get; set; }
-
-
-
  
-     
         public void OnGet()
         {
 

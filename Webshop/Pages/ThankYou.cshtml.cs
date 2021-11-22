@@ -7,21 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Webshop.Pages
 {
-    public class CheckOutModel : PageModel
+    public class ThankYouModel : PageModel
     {
-        public IEnumerable<Models.Products> CartList { get; set; }
-
-  
         public void OnGet()
         {
-            CartList = Data.CartManagar.GetCartProduckts();
-        }
 
-        public void OnPost()
-        {
-          
-        
+            Data.CartManagar.ClearCart();
         }
-       
     }
 }
