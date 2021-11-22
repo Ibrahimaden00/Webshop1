@@ -9,6 +9,7 @@ namespace Webshop.Data
     {
         public static List<Models.Products> CartProduckts { get; set; } = new List<Models.Products>();
 
+        
         public static List<Models.Products> GetCartProduckts()
         {
             return CartProduckts;
@@ -17,6 +18,7 @@ namespace Webshop.Data
         {
             CartProduckts.Add(addProduckt);
             return CartProduckts;
+            // metod för att lägga till produkt
         }
 
 
@@ -25,6 +27,7 @@ namespace Webshop.Data
             CartProduckts.Clear();
 
             return CartProduckts;
+            // metod för att rensa cart listan
         }
 
 

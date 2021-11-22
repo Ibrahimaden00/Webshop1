@@ -208,9 +208,7 @@ namespace Webshop.Data
             return "Denna produckt har lagts till";
         }
         public static string EditProduckt(string title, int stock, int id, double price)
-        {
-   
-            
+        {           
             Products[id - 1].Title = title; 
             Products[id - 1].Price = price;
             Products[id - 1].Stock =stock;

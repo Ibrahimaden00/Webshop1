@@ -23,10 +23,10 @@ namespace Webshop.Data
             if( inStock.Stock>0)
             { 
             inStock.Stock--;
-            StockBalances.Remove(inStock);
-           
+            StockBalances.Remove(inStock);          
             }
             return StockBalances;
+            // metod som tar bort en stock 
 
         }
 

@@ -5,3 +5,5 @@
 $(function () {
     $('#modal').modal('toggle');
 });
+
+// Enablar modals att poppa upp(popover)
