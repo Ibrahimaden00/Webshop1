@@ -1,57 +1,68 @@
 ﻿@page
 @model Webshop.Pages.CheckOutModel
-@{
+@{double Sum = 0;
+    double frakt = 0;
 }
 
-<h2> Dessa produkter öper du nu</h2>
+
+<h2> Dessa produkter Köper du nu</h2>
+
 
 @foreach (var produckt in Model.CartList)
+{
+    Sum += produckt.Price;
+    frakt = Sum * 1.2;
+}
+@foreach (var produckt in Model.CartList)
 
-{     
+{
     <div class="card" style="width: 18rem;">
         <img src="./img/@produckt.ImgFileName" class="card-img-top" alt="card image cap">
         <div class="card-body">
             <h5 class="card-title">@produckt.Title</h5>
-            <p class="card-text">@produckt.Info <p/>
-       <p>   Denna produkt kostar  @produckt.Price</p>
+            <p class="card-text">@produckt.Info <p />
+            <p>   Denna produkt kostar  @produckt.Price</p>
+
         </div>
     </div>
 }
+<p> Den sammanlagda priset är @Sum kr </p>
+<p> Med frakt blir det @Math.Round(@frakt) kr</p>
 
 
-<form>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+
+
+<div class="modal" id="Paypal">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <div class="modal-content">
+        <div class="modal-body">
+            <p> </p>
+            <div class="inputbox"> <input type="text" name="name" class="form-control" required="required"> <span>Paypal Email Address</span> </div>
+            <div class="pay px-5"> <button class="btn btn-primary btn-block">Add paypal</button> </div>
+
         </div>
     </div>
-    <div class="form-group">
-        <label for="inputAddress">Adress</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Långgatan 9">
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="Stad">
-        </div>
-        <div class="form-group col-md-4">
-            <label for="inputStad">Stad</label>
-            <select id="inputStad" class="form-control">
-                <option selected>Choose...</option>
-                <option>Göteborg</option>
-                <option>Stockholm</option>
-                <option>Malmö</option>
-            </select>
-        </div>
-        <div class="form-group col-md-2">
-            <label for="inputPostNummer">Post Nummer</label>
-            <input type="text" class="form-control" id="Post Nummer">
+</div>
+<div class="modal" id="visa">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <div class="modal-content">
+        <div class="modal-body">
+            <p> </p>
+            <div class="inputbox"> <input type="text" name="name" class="form-control" required="required"> <span>Cardholder Name</span> </div>
+            <div class="inputbox"> <input type="text" name="name" min="1" max="999" class="form-control" required="required"> <span>Card Number</span> <i class="fa fa-eye"></i> </div>
+            <div class="d-flex flex-row">
+                <div class="inputbox"> <input type="text" name="name" min="1" max="999" class="form-control" required="required"> <span>Expiration Date</span> </div>
+                <div class="inputbox"> <input type="text" name="name" min="1" max="999" class="form-control" required="required"> <span>CVV</span> </div>
+            </div>
         </div>
     </div>
-        <p>Skriv in 1 för att bevisa att du inte är en robot </p><input type="text" asp-for="@Model.tal" />
-    <button type="submit" class="btn btn-primary">Köp</button>
+</div>
 
-</form>
+<button type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#Paypal">
+    <i class="fa fa-rocket"></i> Paypal
 
+</button>
+<button type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#visa">
+    <i class="fa fa-rocket"></i> Visa
 
+</button>

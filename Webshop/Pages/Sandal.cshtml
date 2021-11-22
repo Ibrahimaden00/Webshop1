@@ -1,6 +1,7 @@
 ﻿@page
 @model Webshop.Pages.SandalModel
 @{ double pricesum = 0;
+
 }
 
 <div class="text-center">
@@ -18,6 +19,17 @@
     {
         if (products is Models.Sandaler)
         {
+            <div class="modal" id="leggo">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p> @products.Info</p>
+
+                    </div>
+                </div>
+            </div>
+
+
             <p>
                 <div class="card col-3" style="width: 40rem;">
                     <p>@products.Title</p>
@@ -29,10 +41,25 @@
                     <a asp-page="Sandal" asp-route-producktId="@products.Id">Lägg till i Shopcarten</a>
                     <p> Det fanns bara @products.Stock kvar</p>
                     <p> Denna produkts id är @products.Id</p>
+                    <button type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#leggo">
+                        <i class="fa fa-rocket"></i> Klicka här för mer information
+
+                    </button>
+
+
+
                 </div>
 
+
             </p>
+
+
         }
 
     }
 </div>
+
+
+
+
+

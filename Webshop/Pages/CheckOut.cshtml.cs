@@ -22,7 +22,7 @@ namespace Webshop.Pages
         {
           
             {
-
+                if(tal==1)
                 CartList = Data.CartManagar.ClearCart();
             }
         }
